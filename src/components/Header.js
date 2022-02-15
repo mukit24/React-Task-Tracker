@@ -5,7 +5,7 @@ const Header = (props) => {
     const onClick = () => console.log('clicked');
 
     return (
-        <header className="p-5 d-flex justify-content-evenly">
+        <header className="py-5 d-flex justify-content-between">
             <h2>{props.title}</h2>
             <Button color='btn-success' text='Add' onClick={onClick} />
         </header>
