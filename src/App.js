@@ -25,6 +25,13 @@ const App = () => {
     }
   ])
 
+  // Add Task
+  const addTask = (task) => {
+    const id = Math.floor(Math.random()*10000)+1;
+    const newTask = {id,...task}
+    setTasks([...tasks,newTask])
+  }
+
   // Delete Task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id))
@@ -40,7 +47,7 @@ const App = () => {
       <div className="row justify-content-center">
         <div className="col-lg-6">
           <Header />
-          <AddTask />
+          <AddTask onAdd = {addTask}/>
           {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : <h6 className="alert alert-danger text-center">No Task To Show</h6>}
         </div>
       </div>
