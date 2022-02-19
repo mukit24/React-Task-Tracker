@@ -4,6 +4,8 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 
 const App = () => {
+  const [showAddTask, setshowAddTask] = useState(false);
+
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -46,8 +48,8 @@ const App = () => {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-lg-6">
-          <Header />
-          <AddTask onAdd = {addTask}/>
+          <Header onAdd = {() => setshowAddTask(!showAddTask)} showAdd = {showAddTask}/>
+          {showAddTask && <AddTask onAdd = {addTask}/>}
           {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : <h6 className="alert alert-danger text-center">No Task To Show</h6>}
         </div>
       </div>
