@@ -88,9 +88,11 @@ const App = () => {
             <Header onAdd={() => setshowAddTask(!showAddTask)} showAdd={showAddTask} />
 
             <Routes>
+              
               <Route path="/" element={<>
                 {showAddTask && <AddTask onAdd={addTask} />}
                 {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} /> : <h6 className="alert alert-danger text-center">No Task To Show</h6>}</>} />
+
               <Route path='/about' element={<About />} />
             </Routes>
             <Footer />
