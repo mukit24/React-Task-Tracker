@@ -13,10 +13,10 @@
       "reminder": true
     },
     {
-      "id": 3,
-      "text": "Shopping",
-      "day": "Feb 5 at 6.30pm",
-      "reminder": false
+      "text": "Dinner",
+      "day": "May 1 at 8.30 PM",
+      "reminder": false,
+      "id": 3
     }
-  ] 
+  ]
 }
