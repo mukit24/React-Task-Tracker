@@ -5,32 +5,22 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import axios from "axios";
 
 const App = () => {
   const [showAddTask, setshowAddTask] = useState(false);
 
   const [tasks, setTasks] = useState([])
 
-  // useEffect(() => {
-  //   const getTasks = async () => {
-  //     const taskFromServer = await fetchTasks()
-  //     setTasks(taskFromServer)
-  //   }
-
-  //   getTasks()
-  // }, [])
   useEffect(() => {
     const getTasks = async () => {
-      const taskFromServer = await axios.get(api)
-      setTasks(taskFromServer.data)
+      const taskFromServer = await fetchTasks()
+      setTasks(taskFromServer)
     }
 
     getTasks()
   }, [])
 
-
-  const api = 'https://react-task-tracker-24.herokuapp.com:5000/tasks'
+  const api = 'https://react-task-tracker-24.herokuapp.com/tasks'
 
   //Fetch Tasks
   const fetchTasks = async () => {
