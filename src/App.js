@@ -30,7 +30,7 @@ const App = () => {
   }, [])
 
 
-  const api = 'http://react-task-tracker-24.herokuapp.com:5000/tasks'
+  const api = 'https://react-task-tracker-24.herokuapp.com:5000/tasks'
 
   //Fetch Tasks
   const fetchTasks = async () => {
