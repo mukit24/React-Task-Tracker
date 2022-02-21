@@ -15,8 +15,14 @@
     {
       "text": "Dinner",
       "day": "May 1 at 8.30 PM",
-      "reminder": false,
+      "reminder": true,
       "id": 3
+    },
+    {
+      "text": "test",
+      "day": "dgsdgds",
+      "reminder": true,
+      "id": 4
     }
   ]
 }
