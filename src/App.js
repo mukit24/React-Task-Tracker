@@ -81,7 +81,7 @@ const App = () => {
   }
 
   return (
-    <Router basename="/React-Task-Tracker">
+    <Router>
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-6">
