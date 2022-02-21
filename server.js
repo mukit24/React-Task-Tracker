@@ -16,7 +16,7 @@ server.use(middlewares);
 
 server.use(jsonServer.rewriter({
 
-  '/api/*': '/$1',
+  '/http://localhost:5000/tasks/*': '/$1',
 
 }))
 
