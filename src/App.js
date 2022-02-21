@@ -5,20 +5,30 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import axios from "axios";
 
 const App = () => {
   const [showAddTask, setshowAddTask] = useState(false);
 
   const [tasks, setTasks] = useState([])
 
+  // useEffect(() => {
+  //   const getTasks = async () => {
+  //     const taskFromServer = await fetchTasks()
+  //     setTasks(taskFromServer)
+  //   }
+
+  //   getTasks()
+  // }, [])
   useEffect(() => {
     const getTasks = async () => {
-      const taskFromServer = await fetchTasks()
-      setTasks(taskFromServer)
+      const taskFromServer = await axios.get(api)
+      setTasks(taskFromServer.data)
     }
 
     getTasks()
   }, [])
+
 
   const api = 'http://localhost:5000/tasks'
 
