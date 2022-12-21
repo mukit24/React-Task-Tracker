@@ -1,2 +1,6 @@
-## A simple react app which uses JSON server as backend
-**Live Demo: https://react-task-tracker-24.herokuapp.com/** 
+## Task Tracker Is A Simple CRUD Application
+## Major Functionality
+* ### CRUD Operation Of Task
+* ### Fake Rest API By JSON Server
+### Language and Technologies: React, Bootstrap, Javascript, JSON Server
+
